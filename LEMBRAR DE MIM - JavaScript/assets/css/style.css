@@ -47,10 +47,8 @@ div > label > .inputescrever{
 	font-size: 14px;
 	color: #410A8A;
 }
-
-div > label > input[type="checkbox"]{
-	accent-color: #A562FD;
-	font-weight: 900;
+.inputescrever:focus{
+	animation: pulsar 2s ease infinite;
 }
 
 #btnlembrar{
@@ -63,5 +61,18 @@ div > label > input[type="checkbox"]{
 	border-top: 3px solid #B687F6;
 	border-bottom: 3px solid #7B4ABC;
 	border-radius: 3px;
-	font-weight: 900
+	font-weight: 900;
+	outline: none;
+}
+
+@keyframes pulsar{
+	0%{
+		box-shadow: 0px 0px 0px #A562FD;
+	}
+	50%{
+		box-shadow: 0px 0px 10px #A562FD;
+	}
+	100%{
+		box-shadow: 0px 0px 0px #A562FD;
+	}
 }
