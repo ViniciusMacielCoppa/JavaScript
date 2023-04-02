@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Merriweather Sans', sans-serif;
-  color: #646669;
   outline: none;
 }
 li{
@@ -14,6 +13,7 @@ button{
   cursor: pointer;
 }
 body{
+  color: #646669;
   width: 100%;
   height: 100vh;
   background-color: #FDFCFE;
@@ -98,18 +98,15 @@ main{
 	align-items: center;
 	gap: 10px;
 
-   	background-color: #F6F7F8;
-   	border: 1px solid #DFDFDF;
-   	border-radius: 3px;
-   	padding: 5px 10px; 
-   	font-weight: 700;
-   	transition: all .5s;
-   	/*transform: translateY(10px);*/
-   	/*opacity: 0;*/
+ 	background-color: #F6F7F8;
+ 	border: 1px solid #DFDFDF;
+ 	border-radius: 3px;
+ 	padding: 5px 10px; 
+ 	font-weight: 700;
+ 	transition: all .5s;
 }
 
 .containerMain > ul > li > p{
-	width: 40%;
 	color: #838487;
 }
 
@@ -144,11 +141,37 @@ i{
 
 
 
+.tarefaadd{
+  padding: 20px 50px;
+  background-color: #c4ffc7;
+  color: #38ad26;
+  border: 1px solid #8bdb90;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 900;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all .5s;
+}
 
-
-
-
-
+.tarefaerro{
+  padding: 20px 50px;
+  background-color: #F8D7DA;
+  color: #84344B;
+  border: 1px solid #ffa6ad;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 900;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all .5s;
+}
 
 
 
@@ -166,6 +189,7 @@ i{
     border-bottom: 2px solid #DADDED;
   }
 }
+
 
 *::-webkit-scrollbar {
     width: 10px;
