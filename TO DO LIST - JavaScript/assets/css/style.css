@@ -61,7 +61,9 @@ header{
 #formulario > #f-addTarefa:focus{
   animation: piscar 1s ease infinite
 }
-
+#formulario > #f-addTarefa::placeholder{
+  color: #B5B2B2;
+}
 
 #btn-addTarefa{
   background-color: #1493D1;
@@ -143,7 +145,7 @@ i{
 
 .tarefaadd{
   padding: 20px 50px;
-  background-color: #DCFFDD;
+  background-color: #c4ffc7;
   color: #38ad26;
   border: 1px solid #8bdb90;
   border-radius: 3px;
@@ -159,7 +161,7 @@ i{
 
 .tarefaerro{
   padding: 20px 50px;
-  background-color: #FBE3E5;
+  background-color: #F8D7DA;
   color: #84344B;
   border: 1px solid #ffa6ad;
   border-radius: 3px;

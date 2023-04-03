@@ -45,36 +45,38 @@ function DeletarTarefa(i){
 }
 
 btnAdd.addEventListener('click', ()=> {
-	let novaTarefa = {
-		name: '',
-		checado: false
-	}
 
-	if(escreverTarefa.value != '' && escreverTarefa.value != ' '){
-		document.querySelector('.tarefaadd').style.opacity = '1';
-		document.querySelector('.tarefaadd').style.top = '30px';
+	if(escreverTarefa.value.trim().length < 1){
+//  MENSAGE DE ERRO
+    document.querySelector('.tarefaerro').style.opacity = '1';
+    document.querySelector('.tarefaerro').style.top = '30px';
+    setTimeout(()=> {
+      document.querySelector('.tarefaerro').style.opacity = '0';
+      document.querySelector('.tarefaerro').style.top = '0px';
+    },1000)
 
-		setTimeout(()=> {
-			document.querySelector('.tarefaadd').style.opacity = '0';
-			document.querySelector('.tarefaadd').style.top = '0px';
-		},1000)
+    escreverTarefa.value = ''
+    escreverTarefa.focus()
 
-		novaTarefa.name = escreverTarefa.value
-		tarefas.push(novaTarefa)
-		escreverTarefa.focus()
-		escreverTarefa.value = ''
-		MostrarTarefas()
 		return
 	}
+  
+  //  MENSAGEM DE SUCESSO
+  document.querySelector('.tarefaadd').style.opacity = '1';
+  document.querySelector('.tarefaadd').style.top = '30px';
+  setTimeout(()=> {
+    document.querySelector('.tarefaadd').style.opacity = '0';
+    document.querySelector('.tarefaadd').style.top = '0px';
+  },1000)
 
-	document.querySelector('.tarefaerro').style.opacity = '1';
-	document.querySelector('.tarefaerro').style.top = '30px';
+  //  PUSH PARA O ARRAY COM NOVOS VALORES
+  tarefas.push({
+    name: escreverTarefa.value,
+    checado: false
+  })
 
-	setTimeout(()=> {
-		document.querySelector('.tarefaerro').style.opacity = '0';
-		document.querySelector('.tarefaerro').style.top = '0px';
-	},1000)
-	
-	escreverTarefa.value = ''
-	escreverTarefa.focus()
+  escreverTarefa.focus()
+  escreverTarefa.value = ''
+  MostrarTarefas()
+
 })
