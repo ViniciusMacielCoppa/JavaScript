@@ -93,57 +93,57 @@ main{
   padding: 5px;
 }
 .containerMain > ul > li{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 
- 	background-color: #F6F7F8;
- 	border: 1px solid #DFDFDF;
- 	border-radius: 3px;
- 	padding: 5px 10px; 
- 	font-weight: 700;
- 	transition: all .5s;
+  background-color: #F6F7F8;
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+  padding: 5px 10px; 
+  font-weight: 700;
+  transition: all .5s;
 }
 
 .containerMain > ul > li > p{
-	color: #838487;
+  color: #838487;
 }
 
 .containerMain > ul > li > div{
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .containerMain > ul > li > div > button{
-	width: 30px;
-	height: 30px;
+  width: 30px;
+  height: 30px;
 
-	border: none;
-	border-radius: 3px;
+  border: none;
+  border-radius: 3px;
 }
 #btn-check{
-	background-color: #1493D1;
-	transition: all .3s;
+  background-color: #1493D1;
+  transition: all .3s;
 }
 #btn-check:hover{
-	background-color: #1587BE;
+  background-color: #1587BE;
 }
 #btn-delete{
-	background-color: #D11414;
-	transition: all .3s;
+  background-color: #D11414;
+  transition: all .3s;
 }
 #btn-delete:hover{
-	background-color: #BE1515;
+  background-color: #BE1515;
 }
 i{
-	color: white;
+  color: white;
 }
 
 
 
 .tarefaadd{
   padding: 20px 50px;
-  background-color: #c4ffc7;
+  background-color: #DCFFDD;
   color: #38ad26;
   border: 1px solid #8bdb90;
   border-radius: 3px;
@@ -159,7 +159,7 @@ i{
 
 .tarefaerro{
   padding: 20px 50px;
-  background-color: #F8D7DA;
+  background-color: #FBE3E5;
   color: #84344B;
   border: 1px solid #ffa6ad;
   border-radius: 3px;
@@ -173,6 +173,19 @@ i{
   transition: all .5s;
 }
 
+.checado{
+  text-decoration: line-through;
+  font-weight: 900;
+}
+
+#semTarefas{
+  border: none;
+  border-left: 5px solid #EA0B2C;
+  background-color: #FFE6EA;
+  padding: 20px 10px;
+  border-radius: 0 50px 50px 0;
+  color: #DA0A28;
+}
 
 
 @keyframes piscar{
@@ -181,8 +194,8 @@ i{
     border-bottom: 2px solid #DADDED;
   }
   50%{
-  	background-color: #F6F7FB;
-  	border-bottom: 2px solid #DEE1F1;
+    background-color: #F6F7FB;
+    border-bottom: 2px solid #DEE1F1;
   }
   100%{
     background-color: #F5F6FA;
