@@ -25,6 +25,7 @@ function MostrarTarefas(){
         <button id='btn-check' onclick='MarcarFinalizado(${i})'>
           ${tarefas[i].checado == true ? "<i class='fa-solid fa-xmark'></i>" : "<i class='fa-solid fa-check'></i>"}
         </button>
+        <button id='btn-edit' onclick='EditarTarefa(${i})'><i class="fa-solid fa-pen"></i></button>
         <button id='btn-delete' onclick='DeletarTarefa(${i})'><i class="fa-solid fa-trash"></i></button>
       </div>
     </li>
@@ -47,7 +48,7 @@ function DeletarTarefa(i){
 btnAdd.addEventListener('click', ()=> {
 
 	if(escreverTarefa.value.trim().length < 1){
-//  MENSAGE DE ERRO
+//  MENSAGEM DE ERRO
     document.querySelector('.tarefaerro').style.opacity = '1';
     document.querySelector('.tarefaerro').style.top = '30px';
     setTimeout(()=> {
@@ -74,6 +75,8 @@ btnAdd.addEventListener('click', ()=> {
     name: escreverTarefa.value,
     checado: false
   })
+
+  localStorage.setItem('algo', JSON.stringify(tarefas))
 
   escreverTarefa.focus()
   escreverTarefa.value = ''
