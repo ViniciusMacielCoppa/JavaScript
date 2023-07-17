@@ -2,6 +2,11 @@ const escreverTarefa = document.querySelector('#f-addTarefa')
 const btnAdd = document.querySelector('#btn-addTarefa')
 const lista = document.querySelector('ul')
 
+let alteracao = document.querySelector('#f-editValue')
+const btnSA = document.querySelector('#f-btnSalvar')
+const btnDA = document.querySelector('#f-btnCancelar')
+const containerEdit = document.querySelector('#containerEditBackground')
+
 const tarefas = []
 
 MostrarTarefas()
@@ -76,10 +81,25 @@ btnAdd.addEventListener('click', ()=> {
     checado: false
   })
 
-  localStorage.setItem('algo', JSON.stringify(tarefas))
-
   escreverTarefa.focus()
   escreverTarefa.value = ''
   MostrarTarefas()
 
 })
+
+function EditarTarefa(i){
+  containerEdit.style.display = 'flex'
+  alteracao.value = tarefas[i].name
+  alteracao.focus()
+
+  btnSA.addEventListener('click', () =>{
+    tarefas[i].name = alteracao.value
+    containerEdit.style.display = 'none'
+    MostrarTarefas()
+  })
+
+  btnDA.addEventListener('click', () => {
+      containerEdit.style.display = 'none'
+      alteracao.value = ''
+  })
+}
