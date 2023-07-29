@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Imager criado para usuários do Habblive Hotel, mostrando visuais e interações adicionais.">
+    <meta name="keywords" content="habblive, visual, visuais, imager, imagem, images">
+
+    <link rel="stylesheet" href="./asstes/css/style.css">
+    <link rel="icon" href="./asstes/img/1459186070.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Habblive Imager</title>
+
+</head>
+<body>
+
+    <main id="mainBody">
+        <section id="sectionContainer">
+
+            <!--  PARTE DA IMAGEM E GIRAR A CABEÇA/CORPO  -->
+            <div class="container-img-rotate">
+                <div class="btn-head-body">
+                    <button class="btn-girar btn-esquerda" id="btn-esquerda1"><i class="fa-solid fa-caret-left"></i></button>
+                    <p>Cabeça</p>
+                    <button class="btn-girar btn-direita" id="btn-direita1"><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+                <div class="imagerLive">
+                    <img src="" id="imagemAvatar">
+                </div>
+                <div class="btn-head-body">
+                    <button class="btn-girar btn-esquerda" id="btn-esquerda2"><i class="fa-solid fa-caret-left"></i></button>
+                    <p>Corpo</p>
+                    <button class="btn-girar btn-direita" id="btn-direita2"><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+
+            <!--  PARTE DO FORMULARIO  -->
+            <div class="container-formulario">
+                <!-- Nick -->
+                <label for="nickName" class="labelGeral labelChange">
+                    <p>Usuário</p>
+                    <input type="text" name="nickName" id="userName" class="inputInserir" placeholder="Digite um nickname" value="vini259." maxlength="30">
+                </label>
+
+                <!-- Rosto -->
+                <label for="rosto" class="labelGeral">
+                    <p>Rosto</p>
+                    <select id="rostoCareta" name="rosto" class="inputInserir">
+                        <option value="std">Normal</option>
+                        <option value="sml">Sorrindo</option>
+                        <option value="agr">Nervoso</option>
+                        <option value="sad">Triste</option>
+                        <option value="srp">Surpreso</option>
+                        <option value="spk">Falando</option>
+                        <option value="lol">Sem rosto</option>
+                    </select>
+                </label>
+
+                <!-- TAMANHO -->
+                <label for="tamanho" class="labelGeral">
+                    <p>Tamanho</p>
+                    <select id="tamanhoSize" name="tamanho" class="inputInserir">
+                        <option value="l">Grande</option>
+                        <option value="b">Médio</option>
+                        <option value="s">Pequeno</option>
+                    </select>
+                </label>
+
+                <!-- BACKGROUND -->
+                <!-- <label for="background" class="labelGeral">
+                    <p>Backgrounds</p>
+                    <select id="backgroundPaper" name="background" class="inputInserir">
+                        <option value="padrao">Padrão</option>
+                        <option value="chroma">Chroma key</option>
+                        <option value="floresta">Floresta dos sonhos</option>
+                        <option value="wired">Vale dos Wireds</option>
+                        <option value="praia">Praia habbo</option>
+                    </select>
+                </label> -->
+
+                <!-- APENAS CABEÇA -->
+                <label for="cabecaSo" class="labelGeral">
+                    <p>Apenas Cabeça</p>
+                    <select id="cabecaSo" name="cabecaSo" class="inputInserir">
+                        <option value="cabecaNao">Não</option>
+                        <option value="cabecaSim">Sim</option>
+                    </select>
+                </label>
+
+                <label for="link" class="labelGeral">
+                    <a href="" name="link" target="_blank" id="linkAvatar">Clique aqui para obter a imagem sozinha</a>
+                </label>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="./asstes/JavaScript/script.js"></script>
+
+</body>
+</html>
