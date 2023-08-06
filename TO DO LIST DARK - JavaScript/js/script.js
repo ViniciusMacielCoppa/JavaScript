@@ -92,6 +92,7 @@ function UpdateTask(i){
       return
     }
     alert('Tarefa editada com sucesso!')
+      console.log(`A tarefa ${tasks[i].task} foi alterada para: ${update.value}`)
       tasks[i].task = update.value
       main.style.visibility= 'hidden'
       main.style.pointerEvents = 'none'
@@ -99,6 +100,7 @@ function UpdateTask(i){
   })
   
   Cancel.addEventListener('click', ()=> {
+    console.log(`O modo de edição da tarefa ${tasks[i].task} foi cancelado.`)
     alert('Edição de tarefa cancelada!')
     main.style.visibility= 'hidden'
     main.style.pointerEvents = 'none'
